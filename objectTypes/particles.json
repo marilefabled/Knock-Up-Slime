@@ -1,0 +1,25 @@
+{
+	"name": "Particles",
+	"plugin-id": "Particles",
+	"sid": 490797435559100,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "pixellate",
+			"name": "Pixellate"
+		}
+	],
+	"image": {
+		"width": 16,
+		"height": 15,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 1784843,
+		"useCollisionPoly": true
+	}
+}

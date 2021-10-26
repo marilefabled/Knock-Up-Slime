@@ -1,0 +1,288 @@
+{
+	"name": "sound",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 673009389517345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 565648762617066,
+					"parameters": {
+						"layer": "4"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 104354174332899,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 667961810591770,
+					"parameters": {
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 538298694694530,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-1000"
+					}
+				}
+			],
+			"sid": 129467823287173
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 402403428806662,
+					"parameters": {
+						"comparison": 0,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 565077713323414,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-15"
+					}
+				}
+			],
+			"sid": 405053899252937
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 898437944103161,
+					"parameters": {
+						"comparison": 0,
+						"value": "75"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 612507679453283,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "0"
+					}
+				}
+			],
+			"sid": 389073840643817
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 414440279007392,
+					"parameters": {
+						"comparison": 0,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 838508560721027,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "15"
+					}
+				}
+			],
+			"sid": 297870145177970
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 781200967268050,
+					"parameters": {
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 303922956265963,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "-10000"
+					}
+				}
+			],
+			"sid": 454215488023464
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 966361529003546,
+					"parameters": {
+						"comparison": 0,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 565270981835641,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "-30"
+					}
+				}
+			],
+			"sid": 306374143386382
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 440947997953214,
+					"parameters": {
+						"comparison": 0,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 307605331527852,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "-15"
+					}
+				}
+			],
+			"sid": 989254796915840
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 965476495714626,
+					"parameters": {
+						"comparison": 0,
+						"value": "75"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 142772369172609,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "0"
+					}
+				}
+			],
+			"sid": 284498471397330
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 656728965615760,
+					"parameters": {
+						"comparison": 0,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 313228537190280,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "15"
+					}
+				}
+			],
+			"sid": 240194024367593
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 113545082180790,
+					"parameters": {
+						"comparison": 0,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 126266365272837,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-30"
+					}
+				}
+			],
+			"sid": 320808840176004
+		}
+	],
+	"sid": 841344413509735
+}

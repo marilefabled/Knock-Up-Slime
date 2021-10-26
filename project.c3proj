@@ -1,0 +1,627 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 26800,
+	"name": "Knock Up Slime",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Keyboard",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Mouse",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Tiled Background",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Spritefont2",
+			"name": "Sprite font",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "sliderbar",
+			"name": "Slider bar",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Platform",
+			"name": "Platform",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Physics",
+			"name": "Physics",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Tween",
+			"name": "Tween",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pixellate",
+			"name": "Pixellate",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pulse",
+			"name": "Pulse",
+			"author": "Danguafer/Silexars",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowvertical",
+			"name": "Glow vertical",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "glowhorizontal",
+			"name": "Glow horizontal",
+			"author": "Scirra",
+			"version": "r268",
+			"bundled": false
+		}
+	],
+	"uniqueId": "s6pwj48i2rb",
+	"objectTypes": {
+		"items": [
+			"Mage",
+			"MageAnimation",
+			"Keyboard",
+			"Slime",
+			"range",
+			"Arrow",
+			"Trail",
+			"Smoke",
+			"Mouse",
+			"Browser",
+			"BatAnimation",
+			"Bat",
+			"Sprite3",
+			"Tilemap2",
+			"TiledBackground2",
+			"Particles",
+			"Sprite8",
+			"Sprite9",
+			"Sprite10",
+			"Sprite12",
+			"Sprite13",
+			"Sprite14",
+			"Sprite15",
+			"Sprite16",
+			"Sprite17",
+			"Audio",
+			"flower2",
+			"SpriteFont",
+			"Text",
+			"flower3",
+			"Sprite18",
+			"Sprite19",
+			"SlimeKing",
+			"Sprite",
+			"musicSprite",
+			"SoundSprite",
+			"MusicBar",
+			"SoundBar",
+			"SlimeKing2",
+			"TiledBackground3",
+			"Sprite2",
+			"SpriteFont2",
+			"Sprite20",
+			"TiledBackground4"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [
+		{
+			"members": [
+				"Mage",
+				"MageAnimation"
+			],
+			"selectMode": "normal"
+		},
+		{
+			"members": [
+				"Arrow",
+				"range",
+				"Slime",
+				"Trail"
+			],
+			"selectMode": "normal"
+		}
+	],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"repo",
+			"level",
+			"menu"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"MainCode",
+			"auxillary",
+			"menu",
+			"sound"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "01_Game Start_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 893539537788794
+				},
+				{
+					"name": "01_Game Start_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 521058546444932
+				},
+				{
+					"name": "01_Game Start_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 335152672803207
+				},
+				{
+					"name": "01_Game Start_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 655335008172295
+				},
+				{
+					"name": "01_Gunshot_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 805980317912119
+				},
+				{
+					"name": "01_Gunshot_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 916122090770705
+				},
+				{
+					"name": "01_Gunshot_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 624137141646176
+				},
+				{
+					"name": "01_Gunshot_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 312952654128039
+				},
+				{
+					"name": "01_Hurt_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 387570086706783
+				},
+				{
+					"name": "01_Hurt_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 532439500749979
+				},
+				{
+					"name": "01_Hurt_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 215441962147712
+				},
+				{
+					"name": "01_Hurt_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 499526704450415
+				},
+				{
+					"name": "01_Jump_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 145429046679943
+				},
+				{
+					"name": "01_Jump_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 658106260927039
+				},
+				{
+					"name": "01_Jump_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 385412159713466
+				},
+				{
+					"name": "01_Laser_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 715991109473657
+				},
+				{
+					"name": "01_Laser_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 584000826635504
+				},
+				{
+					"name": "01_Laser_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 600864932383725
+				},
+				{
+					"name": "01_Laser_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 122617628380210
+				},
+				{
+					"name": "01_Punch_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 382805956898239
+				},
+				{
+					"name": "01_Punch_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 382763401222109
+				},
+				{
+					"name": "01_Punch_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 158261411608729
+				},
+				{
+					"name": "01_Punch_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 433809301658693
+				},
+				{
+					"name": "02_Game Start_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 666827325992164
+				},
+				{
+					"name": "02_Game Start_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 293601692699081
+				},
+				{
+					"name": "02_Game Start_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 322562945862680
+				},
+				{
+					"name": "02_Game Start_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 993218233803898
+				},
+				{
+					"name": "02_Jump_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 313076583809851
+				},
+				{
+					"name": "02_Jump_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 717031209872654
+				},
+				{
+					"name": "02_Jump_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 444060647055969
+				},
+				{
+					"name": "03_Game Start_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 889696781208836
+				},
+				{
+					"name": "03_Game Start_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 830083055938059
+				},
+				{
+					"name": "03_Game Start_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 595264354794622
+				},
+				{
+					"name": "03_Game Start_v4.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 402918753132379
+				},
+				{
+					"name": "03_Jump_v1.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 959616712355672
+				},
+				{
+					"name": "03_Jump_v2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 794131651404677
+				},
+				{
+					"name": "03_Jump_v3.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 182050704850783
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [
+				{
+					"name": "purrple-cat-lullaby.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 383407528113203
+				},
+				{
+					"name": "purrple-cat-green-tea.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 709463502265201
+				},
+				{
+					"name": "purrple-cat-time-to-think.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 169353785579554
+				},
+				{
+					"name": "purrple-cat-smores.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 114031784926806
+				},
+				{
+					"name": "purrple-cat-spring-showers.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 619729729650922
+				},
+				{
+					"name": "purrple-cat-floating-castle.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 228308512934019
+				},
+				{
+					"name": "knockupslime.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 430088569336167
+				}
+			],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "loading-logo.png",
+					"type": "image/png",
+					"sid": 520083692618794,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				},
+				{
+					"name": "icon-16.png",
+					"type": "image/png",
+					"sid": 793552263021089,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-32.png",
+					"type": "image/png",
+					"sid": 529883842955389,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-64.png",
+					"type": "image/png",
+					"sid": 937408322344382,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-128.png",
+					"type": "image/png",
+					"sid": 956178126093246,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-256.png",
+					"type": "image/png",
+					"sid": 690968749961378,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "icon-512.png",
+					"type": "image/png",
+					"sid": 396984600253619,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "i'm trippin' lol. ",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "cover",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "nearest",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "progress",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https"
+	},
+	"viewportWidth": 320,
+	"viewportHeight": 180,
+	"firstLayout": "menu"
+}

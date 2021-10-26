@@ -1,0 +1,343 @@
+{
+	"name": "menu",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 239064714881967,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Sprite17"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 739897881343288,
+					"parameters": {
+						"audio-file": "01_Game Start_v2",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 501027894659725,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 733231909666421,
+					"parameters": {
+						"layout": "level"
+					}
+				}
+			],
+			"sid": 812782250214780
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 559422894075215
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 675763752016555,
+					"parameters": {
+						"tag": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 423762973813376,
+					"parameters": {
+						"audio-file": "knockupslime",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 568442140353184
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 452556968902719,
+					"parameters": {
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 762407900510822,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-1000"
+					}
+				}
+			],
+			"sid": 480962245131403
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 168112380765947,
+					"parameters": {
+						"comparison": 0,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 133952121948267,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-30"
+					}
+				}
+			],
+			"sid": 816811723440595
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 503543219206661,
+					"parameters": {
+						"comparison": 0,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 893536697978044,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "-15"
+					}
+				}
+			],
+			"sid": 925854754060467
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 137049662421627,
+					"parameters": {
+						"comparison": 0,
+						"value": "75"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 529821017882768,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "0"
+					}
+				}
+			],
+			"sid": 399816312245331
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "MusicBar",
+					"sid": 539180945211476,
+					"parameters": {
+						"comparison": 0,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 109931702277544,
+					"parameters": {
+						"tag": "\"music\"",
+						"db": "15"
+					}
+				}
+			],
+			"sid": 823445305703373
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 575337327743053,
+					"parameters": {
+						"comparison": 0,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 993841946038918,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "-1000"
+					}
+				}
+			],
+			"sid": 165700640616493
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 480025042108962,
+					"parameters": {
+						"comparison": 0,
+						"value": "25"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 751547460099857,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "-15"
+					}
+				}
+			],
+			"sid": 260012012639481
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 149490129063690,
+					"parameters": {
+						"comparison": 0,
+						"value": "50"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 318117918691769,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "0"
+					}
+				}
+			],
+			"sid": 601713960817572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 982815191625979,
+					"parameters": {
+						"comparison": 0,
+						"value": "75"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 723678399730536,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "5"
+					}
+				}
+			],
+			"sid": 418236271925880
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-value",
+					"objectClass": "SoundBar",
+					"sid": 121633364967895,
+					"parameters": {
+						"comparison": 0,
+						"value": "100"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-volume",
+					"objectClass": "Audio",
+					"sid": 501093296116656,
+					"parameters": {
+						"tag": "\"sfx\"",
+						"db": "10"
+					}
+				}
+			],
+			"sid": 792683056685434
+		}
+	],
+	"sid": 634100943744288
+}

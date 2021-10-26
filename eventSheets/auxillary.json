@@ -1,0 +1,818 @@
+{
+	"name": "auxillary",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "menu",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 909967841378220
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 795508812250262
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 607988741218343,
+					"parameters": {
+						"sprite": "Sprite3"
+					}
+				},
+				{
+					"id": "set-jump-strength",
+					"objectClass": "Mage",
+					"sid": 240952864742386,
+					"behaviorType": "Platform",
+					"parameters": {
+						"jump-strength": "250"
+					}
+				},
+				{
+					"id": "request-fullscreen",
+					"objectClass": "Browser",
+					"sid": 611230833458480,
+					"parameters": {
+						"mode": "stretch-letterbox-scale",
+						"navigation-ui": "hide"
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 897173733926907,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Pulse\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 232954973406212,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 998804680572200,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowHorizontal\""
+					}
+				}
+			],
+			"sid": 371818896301999
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 180527546550243,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [],
+			"actions": [],
+			"sid": 232611514784153,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 512752614041742,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "tween-two-properties",
+					"objectClass": "Bat",
+					"sid": 807275916322448,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"bat\"",
+						"property": "position",
+						"end-x": "Mouse.X",
+						"end-y": "Mouse.Y",
+						"time": "0.2",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				}
+			],
+			"sid": 546432655696799
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Bat",
+					"sid": 146171142758970
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "BatAnimation",
+					"sid": 588095235738567,
+					"parameters": {
+						"object": "Bat",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "add-child",
+					"objectClass": "Bat",
+					"sid": 673226291805710,
+					"parameters": {
+						"child": "BatAnimation",
+						"transform-x": true,
+						"transform-y": true,
+						"transform-w": false,
+						"transform-h": false,
+						"transform-a": false,
+						"transform-z-elevation": false,
+						"destroy-with-parent": true
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 153689606942578,
+					"parameters": {
+						"object-to-create": "BatAnimation",
+						"layer": "0",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 148902508133878
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-any-playing",
+					"objectClass": "Bat",
+					"sid": 413106318889036,
+					"behaviorType": "Tween"
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 307815588632134
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 925924777328966,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"Pulse\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 831109556012534,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"GlowVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 858049894448201,
+					"parameters": {
+						"mode": "enable",
+						"effect": "\"GlowHorizontal\""
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Bat",
+					"sid": 894704351845040,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Bat",
+						"state": "disable"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Bat",
+					"sid": 203043706478585,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "disabled"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 520545979502422,
+					"parameters": {
+						"audio-file": "01_Punch_v3",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"sfx\""
+					}
+				}
+			],
+			"sid": 557042125730784
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-any-playing",
+					"objectClass": "Bat",
+					"sid": 441743645604252,
+					"behaviorType": "Tween",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 140422468772452,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"Pulse\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 380881416566359,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowVertical\""
+					}
+				},
+				{
+					"id": "set-effect-enabled",
+					"objectClass": "BatAnimation",
+					"sid": 887288093663158,
+					"parameters": {
+						"mode": "disable",
+						"effect": "\"GlowHorizontal\""
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 127261641272459,
+					"disabled": true,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "enabledisable-collisions",
+					"objectClass": "Bat",
+					"sid": 441792020033160,
+					"behaviorType": "Physics",
+					"parameters": {
+						"object": "Bat",
+						"state": "enable"
+					}
+				},
+				{
+					"id": "set-enabled",
+					"objectClass": "Bat",
+					"sid": 937087535519245,
+					"behaviorType": "Platform",
+					"parameters": {
+						"state": "enabled"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 494748186492103,
+					"parameters": {
+						"tag": "\"bat\""
+					}
+				}
+			],
+			"sid": 984707859193713
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "Slime",
+					"sid": 406140616852054,
+					"parameters": {
+						"comparison": 0,
+						"number": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-friction",
+					"objectClass": "Slime",
+					"sid": 380839627886789,
+					"behaviorType": "Physics",
+					"parameters": {
+						"friction": "3"
+					}
+				}
+			],
+			"sid": 957921732687193
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Slime",
+					"sid": 772191425811549,
+					"parameters": {
+						"object": "SlimeKing"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 404805335169920,
+					"parameters": {
+						"time-scale": "0.2"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "SpriteFont",
+					"sid": 486599796661879,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "spawn-another-object",
+					"objectClass": "SlimeKing",
+					"sid": 848553318165626,
+					"parameters": {
+						"object": "Particles",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Slime",
+					"sid": 142782034181086
+				},
+				{
+					"id": "tween-two-properties",
+					"objectClass": "SlimeKing",
+					"sid": 425615657411856,
+					"behaviorType": "Tween",
+					"parameters": {
+						"tags": "\"\"",
+						"property": "size",
+						"end-x": "444",
+						"end-y": "444",
+						"time": "10",
+						"ease": "default",
+						"destroy-on-complete": "no",
+						"loop": "no",
+						"ping-pong": "no"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "Tilemap2",
+					"sid": 753521378923334
+				}
+			],
+			"sid": 580643254304295
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-jumping",
+					"objectClass": "Mage",
+					"sid": 271552300983388,
+					"behaviorType": "Platform"
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 561506631281119
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 864879410200344,
+					"parameters": {
+						"audio-file": "01_Jump_v1",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"sfx\""
+					}
+				}
+			],
+			"sid": 532147407172519
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 720333339068743
+				}
+			],
+			"actions": [
+				{
+					"id": "stop",
+					"objectClass": "Audio",
+					"sid": 293818133652545,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				},
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 334109953281643,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "choose(\"purrple-cat-floating-castle\",\"purrple-cat-lullaby\",\"purrple-cat-green-tea\",\"purrple-cat-time-to-think\",\"purrple-cat-spring-showers\",\"purrple-cat-smores\")",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"music\""
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 160490231696821,
+					"parameters": {
+						"time-scale": "1"
+					}
+				}
+			],
+			"sid": 670323293240177
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-ended",
+					"objectClass": "Audio",
+					"sid": 227875191695745,
+					"parameters": {
+						"tag": "\"music\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play-by-name",
+					"objectClass": "Audio",
+					"sid": 986036006219183,
+					"parameters": {
+						"folder": "music",
+						"audio-file-name": "choose(\"purrple-cat-floating-castle\",\"purrple-cat-lullaby\",\"purrple-cat-green-tea\",\"purrple-cat-time-to-think\",\"purrple-cat-spring-showers\",\"purrple-cat-smores\")",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"music\""
+					}
+				}
+			],
+			"sid": 591169302444873
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 776518999032546,
+					"parameters": {
+						"key": 32
+					}
+				}
+			],
+			"actions": [],
+			"sid": 607748195408848,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 934541683272227
+						},
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 107460710663908,
+							"parameters": {
+								"layer": "4"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 302716334245560,
+							"parameters": {
+								"layer": "4",
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 677859008432732,
+							"parameters": {
+								"time-scale": "0"
+							}
+						}
+					],
+					"sid": 560863776682505
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 438634006179399,
+							"parameters": {
+								"layer": "4"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 875342323704708
+						}
+					],
+					"actions": [],
+					"sid": 225041424262350,
+					"disabled": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 513643860421082,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "SpriteFont2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-visible",
+					"objectClass": "System",
+					"sid": 334205325305639,
+					"parameters": {
+						"layer": "4",
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 670904355781833,
+					"parameters": {
+						"time-scale": "1"
+					}
+				}
+			],
+			"sid": 279756035466747
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-object-clicked",
+					"objectClass": "Mouse",
+					"sid": 211698952224175,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked",
+						"object-clicked": "Sprite20"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 613104486513928,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "layer-is-visible",
+							"objectClass": "System",
+							"sid": 212353132703784,
+							"parameters": {
+								"layer": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 505740073663665,
+							"parameters": {
+								"audio-file": "01_Game Start_v2",
+								"loop": "not-looping",
+								"volume": "-7",
+								"tag-optional": "\"sfx\""
+							}
+						},
+						{
+							"id": "set-layer-visible",
+							"objectClass": "System",
+							"sid": 135006423601877,
+							"parameters": {
+								"layer": "4",
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 976434162803101,
+							"parameters": {
+								"time-scale": "1"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 868921295587313,
+							"parameters": {
+								"seconds": "1.0"
+							}
+						},
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 848035054390050
+						}
+					],
+					"sid": 264889963500520
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 319561426412211,
+					"parameters": {
+						"layer": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 972822822571552,
+					"parameters": {
+						"variable": "menu",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 539267540564924
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 912993793065354,
+					"parameters": {
+						"variable": "menu"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 589124412462308,
+					"parameters": {
+						"group-name": "\"slime\"",
+						"state": "deactivated"
+					}
+				}
+			],
+			"sid": 205134270323310
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "layer-is-visible",
+					"objectClass": "System",
+					"sid": 186425559900029,
+					"parameters": {
+						"layer": "4"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 288747552512264,
+					"parameters": {
+						"variable": "menu",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 134277922155212
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 527687156368787,
+					"parameters": {
+						"variable": "menu"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 933949509051867,
+					"parameters": {
+						"group-name": "\"slime\"",
+						"state": "activated"
+					}
+				}
+			],
+			"sid": 649036986080869
+		}
+	],
+	"sid": 284061849686532
+}

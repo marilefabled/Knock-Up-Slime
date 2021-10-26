@@ -1,0 +1,976 @@
+{
+	"name": "MainCode",
+	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "auxillary"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "sound"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Mage",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Sprites",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "MageAnimation",
+									"sid": 594730415360274
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "MageAnimation",
+									"sid": 841884366138315,
+									"parameters": {
+										"object": "Mage",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "add-child",
+									"objectClass": "Mage",
+									"sid": 208965654586965,
+									"parameters": {
+										"child": "MageAnimation",
+										"transform-x": true,
+										"transform-y": true,
+										"transform-w": false,
+										"transform-h": false,
+										"transform-a": false,
+										"transform-z-elevation": false,
+										"destroy-with-parent": true
+									}
+								}
+							],
+							"sid": 960983322737064
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "BatAnimation",
+									"sid": 186186110038207
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "BatAnimation",
+									"sid": 215013164472680,
+									"parameters": {
+										"object": "Bat",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "add-child",
+									"objectClass": "Bat",
+									"sid": 674123424075509,
+									"parameters": {
+										"child": "BatAnimation",
+										"transform-x": true,
+										"transform-y": true,
+										"transform-w": false,
+										"transform-h": false,
+										"transform-a": false,
+										"transform-z-elevation": false,
+										"destroy-with-parent": true
+									}
+								}
+							],
+							"sid": 180036662425839
+						}
+					],
+					"sid": 784603836528212
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Controls",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 940876619458367,
+									"parameters": {
+										"key": 37
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 437988264635019,
+									"parameters": {
+										"key": 65
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mage",
+									"sid": 855623151936150,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "left"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "MageAnimation",
+									"sid": 529537017026218,
+									"parameters": {
+										"state": "mirrored"
+									}
+								}
+							],
+							"sid": 264402595788968,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 419887578263887,
+									"parameters": {
+										"key": 39
+									}
+								},
+								{
+									"id": "key-is-down",
+									"objectClass": "Keyboard",
+									"sid": 769710035630709,
+									"parameters": {
+										"key": 68
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mage",
+									"sid": 519097540705963,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "right"
+									}
+								},
+								{
+									"id": "set-mirrored",
+									"objectClass": "MageAnimation",
+									"sid": 133926513372859,
+									"parameters": {
+										"state": "not-mirrored"
+									}
+								}
+							],
+							"sid": 600039708179932,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 462072712069954,
+									"parameters": {
+										"key": 38
+									}
+								},
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 749339836636804,
+									"parameters": {
+										"key": 87
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "simulate-control",
+									"objectClass": "Mage",
+									"sid": 801526876848270,
+									"behaviorType": "Platform",
+									"parameters": {
+										"control": "jump"
+									}
+								}
+							],
+							"sid": 145191292488866,
+							"isOrBlock": true
+						}
+					],
+					"sid": 284160857497412
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "Animation",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-on-floor",
+									"objectClass": "Mage",
+									"sid": 266464726372936,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [],
+							"sid": 639517252066251,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Walk animation."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-moving",
+											"objectClass": "Mage",
+											"sid": 294208329514007,
+											"behaviorType": "Platform"
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "MageAnimation",
+											"sid": 699508223240532,
+											"parameters": {
+												"animation": "\"Walk\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 679531821720365
+								},
+								{
+									"eventType": "comment",
+									"text": "Idle animation."
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 141608825908048
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "MageAnimation",
+											"sid": 620842227111831,
+											"parameters": {
+												"animation": "\"Idle\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 157673714687736
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Jump animation."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-jumping",
+									"objectClass": "Mage",
+									"sid": 168244418263795,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MageAnimation",
+									"sid": 697058833279955,
+									"parameters": {
+										"animation": "\"Jump\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 938264186792587
+						},
+						{
+							"eventType": "comment",
+							"text": "Fall animation."
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-falling",
+									"objectClass": "Mage",
+									"sid": 457562151276971,
+									"behaviorType": "Platform"
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "MageAnimation",
+									"sid": 225296720904566,
+									"parameters": {
+										"animation": "\"Fall\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 205139548287961
+						}
+					],
+					"sid": 613719944894298
+				}
+			],
+			"sid": 438447210557978
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "slime",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Slime",
+							"sid": 685181927286808
+						}
+					],
+					"actions": [
+						{
+							"id": "set-stepping-mode",
+							"objectClass": "Slime",
+							"sid": 650984866986273,
+							"behaviorType": "Physics",
+							"parameters": {
+								"mode": "framerate-independent"
+							}
+						}
+					],
+					"sid": 279589801453130
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "range",
+							"sid": 671910336662327
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "range",
+							"sid": 169809047909383,
+							"parameters": {
+								"object": "Slime",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Slime",
+							"sid": 672293886163275,
+							"parameters": {
+								"child": "range",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-z-elevation": false,
+								"destroy-with-parent": true
+							}
+						}
+					],
+					"sid": 572938676597554
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Arrow",
+							"sid": 649651894724641
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Arrow",
+							"sid": 729367207080980,
+							"parameters": {
+								"object": "Slime",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Slime",
+							"sid": 362665053142894,
+							"parameters": {
+								"child": "Arrow",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-z-elevation": false,
+								"destroy-with-parent": true
+							}
+						}
+					],
+					"sid": 819234420847773
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-created",
+							"objectClass": "Trail",
+							"sid": 871079643126714
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "Trail",
+							"sid": 157174461365528,
+							"parameters": {
+								"object": "Slime",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "move-to-object",
+							"objectClass": "Trail",
+							"sid": 770124775904679,
+							"parameters": {
+								"where": "behind",
+								"object": "Slime"
+							}
+						},
+						{
+							"id": "add-child",
+							"objectClass": "Slime",
+							"sid": 322987410660603,
+							"parameters": {
+								"child": "Trail",
+								"transform-x": true,
+								"transform-y": true,
+								"transform-w": false,
+								"transform-h": false,
+								"transform-a": false,
+								"transform-z-elevation": false,
+								"destroy-with-parent": true
+							}
+						}
+					],
+					"sid": 893263932693186
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 474806138091396
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Arrow",
+							"sid": 599244055961239,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 842820294755379
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Mage",
+							"sid": 156903492777414,
+							"parameters": {
+								"object": "range"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "range",
+							"sid": 836042383694012,
+							"disabled": true,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Arrow",
+							"sid": 901203728380535,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 204552828316279,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-angle-toward-position",
+									"objectClass": "Arrow",
+									"sid": 620906756731329,
+									"parameters": {
+										"x": "Mouse.X",
+										"y": "Mouse.Y"
+									}
+								}
+							],
+							"sid": 450503224620860,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-click",
+									"objectClass": "Mouse",
+									"sid": 933729963737710,
+									"parameters": {
+										"mouse-button": "left",
+										"click-type": "clicked"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "play",
+									"objectClass": "Audio",
+									"sid": 317177514057117,
+									"parameters": {
+										"audio-file": "01_Laser_v2",
+										"loop": "not-looping",
+										"volume": "-5",
+										"tag-optional": "\"sfx\""
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 157357322269683,
+									"parameters": {
+										"group-name": "\"Animation\"",
+										"state": "deactivated"
+									}
+								},
+								{
+									"id": "set-animation",
+									"objectClass": "MageAnimation",
+									"sid": 829965861037466,
+									"parameters": {
+										"animation": "\"Attack\"",
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "start-animation",
+									"objectClass": "MageAnimation",
+									"sid": 496536986291451,
+									"parameters": {
+										"from": "beginning"
+									}
+								},
+								{
+									"id": "set-velocity",
+									"objectClass": "Slime",
+									"sid": 282002212430039,
+									"behaviorType": "Physics",
+									"parameters": {
+										"x-component": "0",
+										"y-component": "0"
+									}
+								},
+								{
+									"id": "apply-force-at-angle",
+									"objectClass": "Slime",
+									"sid": 982469745580315,
+									"behaviorType": "Physics",
+									"parameters": {
+										"force": "40",
+										"angle": "Arrow.Angle",
+										"image-point": "0"
+									}
+								},
+								{
+									"id": "spawn-another-object",
+									"objectClass": "Mage",
+									"sid": 744893463415092,
+									"parameters": {
+										"object": "Smoke",
+										"layer": "\"World\"",
+										"image-point": "0",
+										"create-hierarchy": false
+									}
+								},
+								{
+									"id": "move-at-angle",
+									"objectClass": "Smoke",
+									"sid": 599450410826264,
+									"parameters": {
+										"angle": "angle(Self.X, Self.Y, Slime.X, Slime.Y)",
+										"distance": "distance(Self.X, Self.Y, Slime.X, Slime.Y) / 2"
+									}
+								}
+							],
+							"sid": 993164210527506,
+							"isOrBlock": true
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 792293256638885
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Mage",
+							"sid": 620905237426754,
+							"parameters": {
+								"object": "range"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "range",
+							"sid": 361313909121467,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Arrow",
+							"sid": 965073917315490,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 251105357090117
+				}
+			],
+			"sid": 841549361469842
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Debug",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 715460127095457,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 160180639486673
+						}
+					],
+					"sid": 956960906159035,
+					"disabled": true,
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-click",
+							"objectClass": "Mouse",
+							"sid": 555160180405150,
+							"parameters": {
+								"mouse-button": "middle",
+								"click-type": "clicked"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position",
+							"objectClass": "Slime",
+							"sid": 651441974544149,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 493148830817547,
+					"disabled": true
+				}
+			],
+			"sid": 348234498969025
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "MageAnimation",
+					"sid": 161236279290080,
+					"parameters": {
+						"animation": "\"Attack\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-group-active",
+					"objectClass": "System",
+					"sid": 101467970733317,
+					"parameters": {
+						"group-name": "\"Animation\"",
+						"state": "activated"
+					}
+				}
+			],
+			"sid": 943740208607208
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "Bat",
+					"sid": 163194431109091,
+					"parameters": {
+						"object": "Slime"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-velocity",
+					"objectClass": "Slime",
+					"sid": 187068173520005,
+					"behaviorType": "Physics",
+					"parameters": {
+						"x-component": "0",
+						"y-component": "0"
+					}
+				},
+				{
+					"id": "apply-force-at-angle",
+					"objectClass": "Slime",
+					"sid": 534747952226164,
+					"behaviorType": "Physics",
+					"parameters": {
+						"force": "50",
+						"angle": "Arrow.Angle",
+						"image-point": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "BatAnimation",
+					"sid": 737251528680653,
+					"parameters": {
+						"animation": "\"attack\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 946448744154625,
+					"parameters": {
+						"audio-file": "01_Laser_v4",
+						"loop": "not-looping",
+						"volume": "-5",
+						"tag-optional": "\"sfx\""
+					}
+				}
+			],
+			"sid": 785858372753396
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "BatAnimation",
+					"sid": 286628792333613,
+					"parameters": {
+						"animation": "\"Attack\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "BatAnimation",
+					"sid": 455268500291301,
+					"parameters": {
+						"animation": "\"Idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 216923804618849
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Bat",
+					"sid": 895607552282565,
+					"parameters": {
+						"object": "range"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "Arrow",
+					"sid": 352908152994543,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 632405625120220,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-angle-toward-position",
+							"objectClass": "Arrow",
+							"sid": 282679375534372,
+							"parameters": {
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						}
+					],
+					"sid": 682151231381770,
+					"isOrBlock": true
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 346913806219121
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "Mage",
+					"sid": 239008416144696,
+					"parameters": {
+						"object": "range"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "range",
+					"sid": 257863147694158,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "Arrow",
+					"sid": 266229040112681,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				}
+			],
+			"sid": 126905504568113
+		}
+	],
+	"sid": 703169307524782
+}
